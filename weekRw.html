@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weekRw</title>
+    <link rel="stylesheet" href="weekRw.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--메뉴 바-->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="Group 42.png" class="logoDesign">
+                <img src="Review Manager.png" class="logoName">
+            </div>
+            <ul>
+                <li>
+                    <a href="#" class="active">
+                        <span class="icon"><i class="fa-solid fa-house fa-3x"></i></span>
+                        <span class="item">홈</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-chart-line fa-3x"></i></span>
+                        <span class="item">리뷰 모아보기</v>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-user-large fa-3x"></i></span>
+                        <span class="item">마이페이지</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="logout">
+                        <span class="icon"><i class="fa-solid fa-gear fa-3x"></i></span>
+                        <span class="item">로그아웃</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="mainScreen">
+            <!--위치-->
+            <div class="place">
+                <img src="person.png" class="person">
+                <span class="placeName">배스킨라빈스 길음뉴타운점</span>
+            </div>
+            <!--블록-->
+            <div class="block">
+                <div class="title">주 별 리뷰 비율</div>
+                <!--차트 내용-->
+                <div class="chartBox">
+                    <div class="months">
+                        <img src="Vector left.png" class="vector">
+                        <span class="month">6월</span>
+                        <img src="Vector right.png" class="vector">
+                    </div>
+                    <!--차트-->
+                    <canvas id="myChart" class="lineChart"></canvas>
+                    <script>
+                        let ctx = document.getElementById('myChart').getContext('2d');
+
+                        let myChart = new Chart(ctx, {
+                            type: 'bar', //막대그래프   //여기에 bar, line, radar, pie, doughnut, polarArea, bubble(?)
+                            data: {
+                                labels: ['1주', '2주', '3주', '4주', '7월 1주', '7월 2주'],
+                                datasets: [
+                                    {
+                                        label: '긍정 리뷰', //이름
+                                        data: [15, 12, 20, 26, 10, 8],
+                                        backgroundColor: [ //막대 컬러
+                                            'rgba(13, 9, 223, 1)',
+                                            'rgba(13, 9, 223, 1)',
+                                            'rgba(13, 9, 223, 1)',
+                                            'rgba(13, 9, 223, 1)',
+                                            'rgba(13, 9, 223, 1)',
+                                            'rgba(13, 9, 223, 1)'
+                                        ]
+                                    },
+                                    {
+                                        label: '부정 리뷰', //이름
+                                        data: [10, 25, 18, 13, 14, 6],
+                                        backgroundColor: [ //막대 컬러
+                                            'rgba(255, 92, 0, 1)',
+                                            'rgba(255, 92, 0, 1)',
+                                            'rgba(255, 92, 0, 1)',
+                                            'rgba(255, 92, 0, 1)',
+                                            'rgba(255, 92, 0, 1)',
+                                            'rgba(255, 92, 0, 1)'
+                                        ]
+                                    }
+                                ]
+                            },
+                            options: {
+                                plugins: {
+                                        tooltips: {
+                                            enabled: false
+                                        },
+                                        legend: {
+                                            display: false,
+                                        }
+                                    },
+                                responsive: false, // 얘가 false여야 크기 조정 가능
+                                scales: {
+                                        //스케일 커스텀
+                                        xAxes: {
+                                            ticks:{
+                                                fontSize : 23 //안먹음
+                                            },
+                                            grid: {
+                                                display: false //x격자선 안보이게
+                                            },
+                                        },
+                                        yAxes: {
+                                            ticks: {
+                                                display: false, //y축 텍스트 삭제
+                                            },
+                                            grid: {
+                                                display: true, //y격자선 보이게
+                                                borderDash: [5, 5]
+                                            },
+                                            //suggestedMin: 0,
+                                            //suggestedMax: 100,
+                                        }
+                                    }
+                            }
+                        })
+                    </script>
+                </div>
+                <!--오른쪽 화살표-->
+                <div class="arrow">
+                    <img src="rightArrow.png" class="right">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

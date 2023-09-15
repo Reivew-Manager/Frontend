@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>negativeReview</title>
+    <link rel="stylesheet" href="negativeReview.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--메뉴 바-->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="Group 42.png" class="logoDesign">
+                <img src="Review Manager.png" class="logoName">
+            </div>
+            <ul>
+                <li>
+                    <a href="#" class="active">
+                        <span class="icon"><i class="fa-solid fa-house fa-3x"></i></span>
+                        <span class="item">홈</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-chart-line fa-3x"></i></span>
+                        <span class="item">리뷰 모아보기</v>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-user-large fa-3x"></i></span>
+                        <span class="item">마이페이지</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="logout">
+                        <span class="icon"><i class="fa-solid fa-gear fa-3x"></i></span>
+                        <span class="item">로그아웃</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="mainScreen">
+            <!--위치-->
+            <div class="place">
+                <img src="person.png" class="person">
+                <span class="placeName">배스킨라빈스 길음뉴타운점</span>
+            </div>
+            <!--블록-->
+            <div class="block">
+                <!--제목-->
+                <div class="title">부정 리뷰</div>
+                <div class="leftBlock">
+                    <!--차트 내용-->
+                    <div class="chartBox">
+                        <div class="months">
+                            <img src="Vector left.png" class="vector">
+                            <span class="month">6월</span>
+                            <img src="Vector right.png" class="vector">
+                        </div>
+                        <!--라인 그래프-->
+                        <div class="lineChart">
+                            <canvas id="line"></canvas>
+                            <script>
+                                var data = {
+                                    labels: ['1주차', '2주차', '3주차', '4주차', '7월 1주차', '7월 2주차'],
+                                    datasets: [{
+                                        data: [76, 77, 50, 77, 90, 83],
+                                        backgroundColor: [
+                                            'rgba(255, 255, 255, 1)',
+                                            'rgba(255, 255, 255, 1)',
+                                            'rgba(255, 255, 255, 1)',
+                                            'rgba(255, 255, 255, 1)',
+                                            'rgba(255, 255, 255, 1)'
+                                        ],
+                                        borderColor: '#FF3418',
+                                        borderWidth: '8',
+                                        tension: 0, //해도 되고 안해도 되고
+                                        pointBorderColor: '#FF3418',
+                                        pointRadius: 5,
+                                        pointHoverRadius: 10,
+                                        pointHitRadius: 30,
+                                        pointBorderWidth: 1,
+                                    }],
+                                };
+                                var ctx2 = document.getElementById("line").getContext('2d');
+                                var myChart = new Chart(ctx2, {
+                                    type: 'line',
+                                    data: data,
+                                    options: {
+                                        plugins: {
+                                            tooltips: {
+                                                enabled: false
+                                            },
+                                            legend: {
+                                                display: false,
+                                            }
+                                        },
+                                        scales: {
+                                            //스케일 커스텀
+                                            xAxes: {
+                                                ticks: {
+                                                    fontSize: 23
+                                                },
+                                                grid: {
+                                                    display: true, //x격자선 보이게
+                                                    borderDash: [5, 5]
+                                                },
+                                            },
+                                            yAxes: {
+                                                ticks: {
+                                                    display: false, //y축 텍스트 삭제
+                                                },
+                                                grid: {
+                                                    display: false, //y격자선 안보이게
+                                                },
+                                                suggestedMin: 0,
+                                                suggestedMax: 100,
+
+                                            }
+                                        }
+
+                                    },
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <!--총평-->
+                    <div class="review">
+                        <div class="totalRw1">총평</div>
+                        <div class="totalRw2">
+                            청결 n% 회전율 %로 ~부분에 대한 불편 사항이 다수 집계됨
+                            <br>~~~~~~~
+                            <br>~~~~~~~
+                        </div>
+                    </div>
+                </div>
+                <!--도넛그래프-->
+                <div class="side">
+                        <!--도넛 그래프-->
+                        <canvas id="doughnut"></canvas>
+                        <script>
+                            var data = {
+                                labels: ['청결 문제', '서비스 문제', '회전율 문제', '맛 문제'],
+                                datasets: [{
+                                    data: [25, 15, 20, 10],
+                                    backgroundColor: [
+                                    'rgba(255, 198, 157, 1)',
+                                    'rgba(255, 52, 24, 1)',
+                                    'rgba(255, 95, 59, 1)',
+                                    'rgba(255, 162, 109, 1)'
+                                    ]
+                                }]
+                            };
+                            var ctx2 = document.getElementById("doughnut").getContext('2d');
+                            var myChart = new Chart(ctx2, {
+                                type: 'doughnut',
+                                data: data,
+                                options: {
+                                    plugins: {
+                                        legend: {
+                                            display: true,
+                                            position:'bottom',
+                                            labels: {
+                                                //boxWidth: 10,
+                                                //안먹음
+                                                textAlign: 'left',
+                                                usePointStyle:true,
+                                                pointStyle: 'circle'
+                                            }
+                                        }
+                                    },
+                                    responsive: false // 얘가 false여야 크기 조정 가능
+                                },
+                            });
+                        </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

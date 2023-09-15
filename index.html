@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--메뉴 바-->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="Group 42.png" class="logoDesign">
+                <img src="Review Manager.png" class="logoName">
+            </div>
+            <ul>
+                <li>
+                    <a href="#" class="active">
+                        <span class="icon"><i class="fa-solid fa-house fa-3x"></i></span>
+                        <span class="item">홈</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-chart-line fa-3x"></i></span>
+                        <span class="item">리뷰 모아보기</v>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-user-large fa-3x"></i></span>
+                        <span class="item">마이페이지</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="logout">
+                        <span class="icon"><i class="fa-solid fa-gear fa-3x"></i></span>
+                        <span class="item">로그아웃</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="mainScreen">
+            <!--위치-->
+            <div class="place">
+                <img src="person.png" class="person">
+                <span class="placeName">배스킨라빈스 길음뉴타운점</span>
+            </div>
+            <!--블록-->
+            <div class="block">
+                <!--차트 내용-->
+                <div class="chartBox">
+                    <div class="months">
+                        <img src="Vector left.png" class="vector">
+                        <span class="month">6월</span>
+                        <img src="Vector right.png" class="vector">
+                    </div>
+                    <!--라인 그래프-->
+                    <div class="lineChart">
+                        <canvas id="line"></canvas>
+                        <script>
+                            var data = {
+                                labels: ['1주차', '2주차', '3주차', '4주차', '7월 1주차', '7월 2주차'],
+                                datasets: [{
+                                    data: [76, 77, 50, 77, 90, 83],
+                                    backgroundColor: [
+                                        'rgba(255, 255, 255, 1)',
+                                        'rgba(255, 255, 255, 1)',
+                                        'rgba(255, 255, 255, 1)',
+                                        'rgba(255, 255, 255, 1)',
+                                        'rgba(255, 255, 255, 1)'
+                                    ],
+                                    borderColor: '#0D09DF',
+                                    borderWidth: '8',
+                                    tension: 0, //해도 되고 안해도 되고
+                                    pointBorderColor: '#0D09DF',
+                                    pointRadius: 5,
+                                    pointHoverRadius: 10,
+                                    pointHitRadius: 30,
+                                    pointBorderWidth: 1
+                                }],
+                            };
+                            var ctx2 = document.getElementById("line").getContext('2d');
+                            var myChart = new Chart(ctx2, {
+                                type: 'line',
+                                data: data,
+                                options: {
+                                    plugins: {
+                                        tooltips: {
+                                            enabled: false
+                                        },
+                                        legend: {
+                                            display: false,
+                                        }
+                                    },
+                                    scales: {
+                                        //스케일 커스텀
+                                        xAxes: {
+                                            ticks: {
+                                                fontSize: 23
+                                            },
+                                            grid: {
+                                                display: true, //x격자선 보이게
+                                                borderDash: [5, 5]
+                                            },
+                                        },
+                                        yAxes: {
+                                            ticks: {
+                                                display: false, //y축 텍스트 삭제
+                                            },
+                                            grid: {
+                                                display: false, //y격자선 안보이게
+                                            },
+                                            suggestedMin: 0,
+                                            suggestedMax: 100,
+
+                                        }
+                                    }
+
+                                },
+                            });
+                        </script>
+                    </div>
+                </div>
+                <!--리뷰 수-->
+                <div class="side">
+                    <div class="sideBox" id="sideBox1">
+                        <!--최근 긍정리뷰-->
+                        <div class="reviewCount">▶ 최근 3일 동안 추가된 <span class="blueColor">긍정</span> 리뷰 수</div>
+                        <div class="count">
+                            <span class="num1">3</span>
+                            <span class="count1">개</span>
+                        </div>
+                    </div>
+                    <div class="sideBox" id="sideBox2">
+                        <!--최근 부정리뷰-->
+                        <div class="reviewCount">▶ 최근 3일 동안 추가된 <span class="redColor">부정</span> 리뷰 수</div>
+                        <div class="count">
+                            <span class="num2">1</span>
+                            <span class="count2">개</span>
+                        </div>
+                    </div>
+                </div>
+                <!--리뷰 더보기-->
+                <div class="bottom">
+                    <div class="bottomBox" id="bottomBox1">
+                        <!--주별/월별 리뷰-->
+                        <img src="Rectangle 47.png" class="reviewImg">
+                        <div class="reviewName">주별/월별 리뷰</div>
+                        <div class="more">> 자세히 보기</div>
+                    </div>
+                    <div class="bottomBox" id="bottomBox2">
+                        <!--플랫폼 별 리뷰-->
+                        <img src="Rectangle 47.png" class="reviewImg">
+                        <div class="reviewName">플랫폼 별 리뷰</div>
+                        <div class="more">> 자세히 보기</div>
+                    </div>
+                    <div class="bottomBox" id="bottomBox3">
+                        <!--부정 리뷰-->
+                        <img src="Rectangle 47.png" class="reviewImg">
+                        <div class="reviewName">부정 리뷰</div>
+                        <div class="more">> 자세히 보기</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

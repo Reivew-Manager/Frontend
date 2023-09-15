@@ -1,0 +1,325 @@
+html, body {
+    background: linear-gradient(180deg, #120B3C 0%, #280EC9 100%);
+    width:100%;
+    height: 100%;
+    min-width: 1250px;
+    min-height: 650px;
+}
+
+@font-face {
+    font-family: "AppleSDGothicNeoB00";
+    src: url("https://db.onlinewebfonts.com/t/70710ba3196618b630b4a1e532809b1d.eot");
+    src: url("https://db.onlinewebfonts.com/t/70710ba3196618b630b4a1e532809b1d.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/70710ba3196618b630b4a1e532809b1d.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/70710ba3196618b630b4a1e532809b1d.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/70710ba3196618b630b4a1e532809b1d.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/70710ba3196618b630b4a1e532809b1d.svg#AppleSDGothicNeoB00")format("svg");
+}
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 6.5px;
+}
+
+.wrapper {
+    float: left;
+    height:100%;
+    width: 20%;
+    min-width: 250.4px;
+    min-height: 651.2px;
+}
+
+.wrapper .sidebar{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 0;
+    transition: all 0.5s ease;
+    min-width: 250.4px;
+    min-height: 651.2px;
+}
+
+.wrapper .sidebar .logo {
+    margin-top: 2.5rem;
+    margin-left: 4rem;
+    margin-bottom: 8.7rem;
+}
+
+.wrapper .sidebar .logo .logoDesign {
+    height: 6rem;
+}
+
+.wrapper .sidebar .logo .logoName {
+    padding: 1rem;
+    height: 4.5rem;
+}
+
+.wrapper .sidebar ul {
+    padding-left: 10%;
+}
+
+.wrapper .sidebar li a{
+    display: block;
+    padding: 3.4rem 3rem;
+    color: #ffffff;
+    position: relative;
+    width: 100%;
+}
+
+.wrapper .sidebar li a .icon{
+    color: #ffffff;
+    width: 15%;
+    display: inline-block;
+}
+
+.wrapper .sidebar li a:hover,
+.wrapper .sidebar li a.active{
+    border-radius: 20px 0px 0px 20px;
+    background: #F4F5F9;
+    color: #002067;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+/*hover를 같은 설정으로 주고 싶으면 위의 코드보다 하나 위로 위치해야 함*/
+.wrapper .sidebar li a.logout{
+    border-radius: 20px 0px 0px 20px;
+    background: rgba(191, 203, 255, 0.26);
+    margin-top: 90%;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.wrapper .sidebar li a:hover i,
+.wrapper .sidebar ul li a.active i{
+    color: #002067;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+    display: block;
+}
+
+.icon {
+    vertical-align: middle;
+}
+
+.item {
+    vertical-align: middle;
+    font-family: 'AppleSDGothicNeoB00';
+    font-size: 2.4rem;
+    font-style: normal;
+    line-height: normal;
+    padding-left: 2rem;
+}
+
+.main {
+    float:left;
+    width: 79%;
+    height: 97%;
+    min-width: 974.062px;
+    min-height: 607.272px;
+}
+
+.main .mainScreen {
+    width: 100%;
+    height: 100%;
+    background-color: #F5F7FB;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 5px;
+    box-shadow: -4px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    min-width: 974.062px;
+    min-height: 607.272px;
+}
+
+.main .place {
+    margin-top: 2rem;
+    margin-right: 5.87rem;
+    float: right;
+    flex-shrink: 0;
+    min-width: 177.453px;
+    min-height: 31px;
+}
+
+.main .place .person {
+    vertical-align: middle;
+}
+
+.main .place .placeName {
+    color: #BAC7E8;
+    font-family: 'AppleSDGothicNeoB00';
+    font-size: 2.0667rem;
+    font-style: normal;
+    font-weight: 40rem;
+    line-height: normal;
+    vertical-align: middle;
+}
+
+.main .block {
+    width: 850px;
+    height: 100%;
+    padding-top: 7%;
+    margin: auto;
+}
+
+.main .chartBox {
+    width: 595px;
+    height: 318px;
+    flex-shrink: 0;
+    border-radius: 1rem;
+    background: #FFFFFF;
+    float: left;
+}
+
+.main .chartBox .months {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-align: center;
+}
+
+.main .chartBox .month {
+    width: 5.5706rem;
+    color: #000;
+    font-family: 'AppleSDGothicNeoB00'; /*EBOO 찾아야함*/
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 40rem;
+    line-height: normal;
+    padding: 0rem 2.6rem 1.5rem 2.6rem;
+}
+
+.main .chartBox .vector {
+    width: 1.4rem;
+    height: 2.2rem;
+}
+
+.main .chartBox .lineChart {
+    width: 416px;
+    margin: auto;
+}
+
+.main .side {
+    width: 212px;
+    height: 318px;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main .sideBox {
+    width: 100%;
+    height: 46%;
+    background: #FFFFFF;
+    border-radius: 1rem;
+    box-shadow: 0.4rem 0.4rem 0.4rem 0em rgba(0, 0, 0, 0.25);
+}
+
+.main .reviewCount {
+    padding-top: 6%;
+    text-align: center;
+    font-family: 'AppleSDGothicNeoB00';
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 40rem;
+    line-height: normal; 
+}
+
+.main .blueColor {
+    color: #0D09DF;
+    font-family: 'AppleSDGothicNeoB00';
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 40rem;
+    line-height: normal; 
+}
+
+.main .redColor {
+    color: #DF0909;
+    font-family: 'AppleSDGothicNeoB00';
+    font-size: 2rem;
+    font-style: normal;
+}
+
+.main .num1 {
+    color: #0D09DF;
+    font-family: 'AppleSDGothicNeoH00';
+    font-size: 12.8rem;
+    padding-left: 40%;
+}
+
+.main .count1 {
+    color: #0D09DF;
+    font-family: 'AppleSDGothicNeoB00';
+    font-size: 2rem;
+    padding-left: 1.4rem;
+    vertical-align: middle;
+}
+
+.main .num2 {
+    color:#DF0909;
+    font-family: 'AppleSDGothicNeoH00';
+    font-size: 12.8rem;
+    padding-left: 40%;
+}
+
+.main .count2 {
+    color: #DF0909;
+    font-family: 'AppleSDGothicNeoB00';
+    font-size: 2rem;
+    padding-left: 1.4rem;
+    vertical-align: middle;
+}
+
+.main .bottom {
+    width:100%;
+    height:35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main .bottomBox {
+    width: 236px;
+    height: 183px;
+    flex-shrink: 0;
+    border-radius: 1rem;
+    border: 0.1rem solid #C4C4C4;
+    background: #FFF;
+    margin-top: 3%;
+}
+
+.main .reviewImg {
+    background: #9DADFF;
+    width: 100%;
+    height: 70%;
+    flex-shrink: 0;
+    border-radius: 10px 10px 0px 0px;
+    background: url(<path-to-image>), lightgray 8.478px 9.837px / 87.803% 154.769% no-repeat;
+}
+
+.main .reviewName {
+    color: #000;
+    font-family: AppleSDGothicNeoB00;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 40rem;
+    line-height: normal;
+    padding-left: 2.4rem;
+    padding-top: 2%;
+}
+
+.main .more {
+    color: #777;
+    font-family: AppleSDGothicNeoM00;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 40rem;
+    line-height: normal;
+    padding-left: 2.4rem;
+}

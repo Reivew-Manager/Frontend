@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>totalRw</title>
+    <link rel="stylesheet" href="totalRw.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--메뉴 바-->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="Group 42.png" class="logoDesign">
+                <img src="Review Manager.png" class="logoName">
+            </div>
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-house fa-3x"></i></span>
+                        <span class="item">홈</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="active">
+                        <span class="icon"><i class="fa-solid fa-chart-line fa-3x"></i></span>
+                        <span class="item">리뷰 모아보기</v>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-user-large fa-3x"></i></span>
+                        <span class="item">마이페이지</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="logout">
+                        <span class="icon"><i class="fa-solid fa-gear fa-3x"></i></span>
+                        <span class="item">로그아웃</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="mainScreen">
+            <!--위치-->
+            <div class="place">
+                <img src="person.png" class="person">
+                <span class="placeName">배스킨라빈스 길음뉴타운점</span>
+            </div>
+            <!--블록-->
+            <div class="block">
+                <div class="box">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>플랫폼</th>
+                                <th>작성일</th>
+                                <th>작성자</th>
+                                <th>별점</th>
+                                <th>내용</th>
+                                <th>사진여부</th>
+                                <th>긍정/부정 여부</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><!--1번-->
+                                <td>네이버</td>
+                                <td>2023.07.30</td>
+                                <td>아나홀릭</td>
+                                <td>5</td>
+                                <td>이런저런 내용들이 들어가겠지~~~~~~~~~~~~~</td>
+                                <td>Y</td>
+                                <td>긍정</td>
+                            </tr>
+                            <tr><!--2번-->
+                                <td>네이버</td>
+                                <td>2023.07.30</td>
+                                <td>아나홀릭</td>
+                                <td>5</td>
+                                <td>이런저런 내용들이 들어가겠지~~~~~~~~~~~~~</td>
+                                <td>Y</td>
+                                <td>긍정</td>
+                            </tr>
+                            <tr><!--3번-->
+                                <td>네이버</td>
+                                <td>2023.07.30</td>
+                                <td>아나홀릭</td>
+                                <td>5</td>
+                                <td>이런저런 내용들이 들어가겠지~~~~~~~~~~~~~</td>
+                                <td>Y</td>
+                                <td>긍정</td>
+                            </tr>
+                            <tr><!--4번-->
+                                <td>네이버</td>
+                                <td>2023.07.30</td>
+                                <td>아나홀릭</td>
+                                <td>5</td>
+                                <td>이런저런 내용들이 들어가겠지~~~~~~~~~~~~~</td>
+                                <td>Y</td>
+                                <td>긍정</td>
+                            </tr>
+                            <tr><!--5번-->
+                                <td>네이버</td>
+                                <td>2023.07.30</td>
+                                <td>아나홀릭</td>
+                                <td>5</td>
+                                <td>이런저런 내용들이 들어가겠지~~~~~~~~~~~~~</td>
+                                <td>Y</td>
+                                <td>긍정</td>
+                            </tr>
+                            <tr><!--6번-->
+                                <td>네이버</td>
+                                <td>2023.07.30</td>
+                                <td>아나홀릭</td>
+                                <td>5</td>
+                                <td>이런저런 내용들이 들어가겠지~~~~~~~~~~~~~</td>
+                                <td>Y</td>
+                                <td>긍정</td>
+                            </tr>
+                            <tr><!--7번-->
+                                <td>네이버</td>
+                                <td>2023.07.30</td>
+                                <td>아나홀릭</td>
+                                <td>5</td>
+                                <td>이런저런 내용들이 들어가겠지~~~~~~~~~~~~~</td>
+                                <td>Y</td>
+                                <td>긍정</td>
+                            </tr>
+                            <tr><!--8번-->
+                                <td>네이버</td>
+                                <td>2023.07.30</td>
+                                <td>아나홀릭</td>
+                                <td>5</td>
+                                <td>이런저런 내용들이 들어가겠지~~~~~~~~~~~~~</td>
+                                <td>Y</td>
+                                <td>긍정</td>
+                            </tr>
+                            <tr><!--9번-->
+                                <td>네이버</td>
+                                <td>2023.07.30</td>
+                                <td>아나홀릭</td>
+                                <td>5</td>
+                                <td>이런저런 내용들이 들어가겠지~~~~~~~~~~~~~</td>
+                                <td>Y</td>
+                                <td>긍정</td>
+                            </tr>
+                            <tr><!--10번-->
+                                <td>네이버</td>
+                                <td>2023.07.30</td>
+                                <td>아나홀릭</td>
+                                <td>5</td>
+                                <td>이런저런 내용들이 들어가겠지~~~~~~~~~~~~~</td>
+                                <td>Y</td>
+                                <td>긍정</td>
+                            </tr>
+                            <tr><!--11번-->
+                                <td>네이버</td>
+                                <td>2023.07.30</td>
+                                <td>아나홀릭</td>
+                                <td>5</td>
+                                <td>이런저런 내용들이 들어가겠지~~~~~~~~~~~~~</td>
+                                <td>Y</td>
+                                <td>긍정</td>
+                            </tr>
+                            <tr><!--12번-->
+                                <td>네이버</td>
+                                <td>2023.07.30</td>
+                                <td>아나홀릭</td>
+                                <td>5</td>
+                                <td>이런저런 내용들이 들어가겠지~~~~~~~~~~~~~</td>
+                                <td>Y</td>
+                                <td>긍정</td>
+                            </tr>
+                            <tr><!--13번-->
+                                <td>네이버</td>
+                                <td>2023.07.30</td>
+                                <td>아나홀릭</td>
+                                <td>5</td>
+                                <td>이런저런 내용들이 들어가겠지~~~~~~~~~~~~~</td>
+                                <td>Y</td>
+                                <td>긍정</td>
+                            </tr>
+                            <tr><!--14번-->
+                                <td>네이버</td>
+                                <td>2023.07.30</td>
+                                <td>아나홀릭</td>
+                                <td>5</td>
+                                <td>이런저런 내용들이 들어가겠지~~~~~~~~~~~~~</td>
+                                <td>Y</td>
+                                <td>긍정</td>
+                            </tr>
+                            <tr><!--15번-->
+                                <td>네이버</td>
+                                <td>2023.07.30</td>
+                                <td>아나홀릭</td>
+                                <td>5</td>
+                                <td>이런저런 내용들이 들어가겠지~~~~~~~~~~~~~</td>
+                                <td>Y</td>
+                                <td>긍정</td>
+                            </tr>
+                            <tr><!--16번-->
+                                <td>네이버</td>
+                                <td>2023.07.30</td>
+                                <td>아나홀릭</td>
+                                <td>5</td>
+                                <td>이런저런 내용들이 들어가겠지~~~~~~~~~~~~~</td>
+                                <td>Y</td>
+                                <td>긍정</td>
+                            </tr>
+                            <tr><!--17번-->
+                                <td>네이버</td>
+                                <td>2023.07.30</td>
+                                <td>아나홀릭</td>
+                                <td>5</td>
+                                <td>이런저런 내용들이 들어가겠지~~~~~~~~~~~~~</td>
+                                <td>Y</td>
+                                <td>긍정</td>
+                            </tr>
+                            <tr><!--18번-->
+                                <td>네이버</td>
+                                <td>2023.07.30</td>
+                                <td>아나홀릭</td>
+                                <td>5</td>
+                                <td>이런저런 내용들이 들어가겠지~~~~~~~~~~~~~</td>
+                                <td>Y</td>
+                                <td>긍정</td>
+                            </tr>
+                            <tr><!--19번-->
+                                <td>네이버</td>
+                                <td>2023.07.30</td>
+                                <td>아나홀릭</td>
+                                <td>5</td>
+                                <td>이런저런 내용들이 들어가겠지~~~~~~~~~~~~~</td>
+                                <td>Y</td>
+                                <td>긍정</td>
+                            </tr>
+                            <tr><!--20번-->
+                                <td>네이버</td>
+                                <td>2023.07.30</td>
+                                <td>아나홀릭</td>
+                                <td>5</td>
+                                <td>이런저런 내용들이 들어가겠지~~~~~~~~~~~~~</td>
+                                <td>Y</td>
+                                <td>긍정</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 팝업용 임시 버튼 -->
+            <div class="btn-box">
+                <a href="#" class="btn-open" onClick="javascript:popOpen();"></a>
+            </div>
+
+            <!-- modal 영역 -->
+            <div class="modal-bg" onClick="javascript:popClose();"></div>
+            <div class="modal-wrap">
+                <div class="modal-close">
+                    <img src="닫기.png" class="closeBtn" onClick="javascript:popClose();">
+                </div>
+                <table class="pop">
+                    <tr>
+                        <td>플랫폼</td>
+                        <td><img src="naver.jpg" width="20px"></td>
+                    </tr>
+                    <tr>
+                        <td>작성일</td>
+                        <td>2023.07.30</td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td>작성자</td>
+                        <td>셰이나</td>
+                    </tr>
+                    <tr>
+                        <td>별점</td>
+                        <td>
+                            <img src="star.png" width="20px">
+                            <img src="star.png" width="20px">
+                            <img src="star.png" width="20px">
+                            <img src="star.png" width="20px">
+                            <img src="star.png" width="20px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>내용</td>
+                    </tr>
+                    <tr>
+                        <td colspan=2>
+                            <!--비고-->
+                            <div class="box"></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+    </div>
+    <script src="test4.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script> 
+</body>
+</html>
