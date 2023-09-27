@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="test4.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+</head>
+
+<body>
+        <!-- 전체 레이아웃 -->
+        <div id="wrap">
+            <!-- Content -->
+            <section class="content">
+                <div class="container">
+                    <!-- 팝업용 임시 버튼입니다. -->
+                    <div class="btn-box">
+                        <a href="#" class="btn-open" onClick="javascript:popOpen();">
+                            <span>보기</span>
+                        </a>
+                    </div>
+                </div>
+            </section>    
+        </div>
+        <!-- modal 영역 -->
+        <div class="modal-bg" onClick="javascript:popClose();"></div>
+        <div class="modal-wrap">
+            <div class="modal-close">
+                <img src="닫기.png" class="closeBtn" onClick="javascript:popClose();">
+            </div>
+            <table>
+                <tr>
+                    <td>플랫폼</td>
+                    <td><img src="naver.jpg" width="20px"></td>
+                </tr>
+                <tr>
+                    <td>작성일</td>
+                    <td>2023.07.30</td>
+                </tr>
+                </tr>
+                <tr>
+                    <td>작성자</td>
+                    <td>셰이나</td>
+                </tr>
+                <tr>
+                    <td>별점</td>
+                    <td>
+                        <img src="star.png" width="20px">
+                        <img src="star.png" width="20px">
+                        <img src="star.png" width="20px">
+                        <img src="star.png" width="20px">
+                        <img src="star.png" width="20px">
+                    </td>
+                </tr>
+                <tr>
+                    <td>내용</td>
+                </tr>
+                <tr>
+                    <td colspan=2>
+                        <!--비고-->
+                        <div class="box"></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <script src="test4.js"></script>
+        <script src="https://code.jquery.com/jquery-latest.js"></script> 
+</body>
+</html>

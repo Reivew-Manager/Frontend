@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chartJS</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+</head>
+<body>
+    <canvas id="myChart" width="400" height="400"></canvas>
+
+    <script>
+        let ctx = document.getElementById('myChart').getContext('2d');
+
+        let myChart = new Chart(ctx, {
+            type: 'bar', //막대그래프   //여기에 bar, line, radar, pie, doughnut, polarArea, bubble(?)
+            data: {
+                labels: ['운동', '독서', '전시회', '음악', '쇼핑', '여행'],
+                datasets: [{
+                    label: '좋아하는 것', //이름
+                    data: [15, 12, 20, 13, 10, 8],
+                    backgroundColor: [ //막대 컬러
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [ //테두리 컬러
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1 //굵기
+                }]
+            },
+            options: {
+                responsive: false, // 얘가 false여야 크기 조정 가능
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                    
+                }
+            }
+        })
+    </script>
+</body>
+</html>

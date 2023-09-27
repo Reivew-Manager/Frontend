@@ -18,17 +18,17 @@
         <div class="sidebar">
             <div class="logo">
                 <img src="Group 42.png" class="logoDesign">
-                <img src="Review Manager.png" class="logoName">
+                <div class="logoName">Review Manager</div>
             </div>
             <ul>
                 <li>
-                    <a href="#" class="active">
+                    <a href="index.html" class="active">
                         <span class="icon"><i class="fa-solid fa-house fa-3x"></i></span>
                         <span class="item">홈</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="totalRw.html">
                         <span class="icon"><i class="fa-solid fa-chart-line fa-3x"></i></span>
                         <span class="item">리뷰 모아보기</v>
                     </a>
@@ -41,7 +41,7 @@
                 </li>
                 <li>
                     <a href="#" class="logout">
-                        <span class="icon"><i class="fa-solid fa-gear fa-3x"></i></span>
+                        <span class="icon"><i class="fa-solid fa-user-large fa-3x"></i></span>
                         <span class="item">로그아웃</span>
                     </a>
                 </li>
@@ -60,6 +60,14 @@
                 <!--제목-->
                 <div class="title">부정 리뷰</div>
                 <div class="leftBlock">
+                    <!--총평-->
+                    <div class="review">
+                        <div class="totalRw">
+                            청결 n% 회전율 %로 ~부분에 대한 불편 사항이 다수 집계됨
+                            <br>~~~~~~~
+                            <br>~~~~~~~
+                        </div>
+                    </div>
                     <!--차트 내용-->
                     <div class="chartBox">
                         <div class="months">
@@ -82,10 +90,10 @@
                                             'rgba(255, 255, 255, 1)',
                                             'rgba(255, 255, 255, 1)'
                                         ],
-                                        borderColor: '#FF3418',
+                                        borderColor: '#0D09DF',
                                         borderWidth: '8',
                                         tension: 0, //해도 되고 안해도 되고
-                                        pointBorderColor: '#FF3418',
+                                        pointBorderColor: '#0D09DF',
                                         pointRadius: 5,
                                         pointHoverRadius: 10,
                                         pointHitRadius: 30,
@@ -132,15 +140,6 @@
                                     },
                                 });
                             </script>
-                        </div>
-                    </div>
-                    <!--총평-->
-                    <div class="review">
-                        <div class="totalRw1">총평</div>
-                        <div class="totalRw2">
-                            청결 n% 회전율 %로 ~부분에 대한 불편 사항이 다수 집계됨
-                            <br>~~~~~~~
-                            <br>~~~~~~~
                         </div>
                     </div>
                 </div>

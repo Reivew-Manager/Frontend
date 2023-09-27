@@ -2,8 +2,8 @@ html, body {
   background: linear-gradient(180deg, #120B3C 0%, #280EC9 100%);
   width:100%;
   height: 100%;
-  min-width: 1250px;
-  min-height: 650px;
+  min-width: 1518px;
+  min-height: 860px;
 }
 
 @font-face {
@@ -14,6 +14,16 @@ html, body {
   url("https://db.onlinewebfonts.com/t/70710ba3196618b630b4a1e532809b1d.woff")format("woff"),
   url("https://db.onlinewebfonts.com/t/70710ba3196618b630b4a1e532809b1d.ttf")format("truetype"),
   url("https://db.onlinewebfonts.com/t/70710ba3196618b630b4a1e532809b1d.svg#AppleSDGothicNeoB00")format("svg");
+}
+
+@font-face {
+  font-family: "AppleSDGothicNeoH";
+  src: url("https://db.onlinewebfonts.com/t/868657654af992968ba24ec0c50b8482.eot");
+  src: url("https://db.onlinewebfonts.com/t/868657654af992968ba24ec0c50b8482.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/868657654af992968ba24ec0c50b8482.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/868657654af992968ba24ec0c50b8482.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/868657654af992968ba24ec0c50b8482.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/868657654af992968ba24ec0c50b8482.svg#AppleSDGothicNeoH")format("svg");
 }
 
 *{
@@ -29,53 +39,60 @@ html, body {
 .wrapper {
   float: left;
   height:100%;
-  width: 20%;
-  min-width: 250.4px;
-  min-height: 651.2px;
+  width: 260.77px;
 }
 
 .wrapper .sidebar{
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 2rem 0;
-  transition: all 0.5s ease;
-  min-width: 250.4px;
-  min-height: 651.2px;
+  width: 243px;
+  height: 77px;
 }
 
 .wrapper .sidebar .logo {
-  margin-top: 2.5rem;
-  margin-left: 4rem;
-  margin-bottom: 8.7rem;
+  margin-top: 38px;
+  margin-left: 30px;
+  margin-bottom: 35.22px;
+  display: flex;
+  flex-direction: row;
 }
 
 .wrapper .sidebar .logo .logoDesign {
-  height: 6rem;
+  width: 34px;
+  height: 34px;
 }
 
 .wrapper .sidebar .logo .logoName {
-  padding: 1rem;
-  height: 4.5rem;
+  color: #F4F5F9;
+  font-family: 'AppleSDGothicNeoB00';
+  font-size: 20px;
+  padding-left: 17px;
+  padding-top: 5px;
 }
 
 .wrapper .sidebar ul {
-  padding-left: 10%;
+  margin-left: 18px;
 }
 
 .wrapper .sidebar li a{
-  display: block;
-  padding: 3.4rem 3rem;
-  color: #ffffff;
-  position: relative;
-  width: 100%;
+  display: flex;
+  width: 243px;
+  height: 77px;
+  padding: 0px 20px 0px 30px;
+  align-items: center;
+  gap: 26px;
+  color: #FFF;
+  border-radius: 20px 0px 0px 20px;
 }
 
 .wrapper .sidebar li a .icon{
   color: #ffffff;
-  width: 15%;
-  display: inline-block;
+  vertical-align: middle;
+}
+
+.wrapper .sidebar li a .item{
+  font-family: 'AppleSDGothicNeoB00';
+  font-size: 20px; /*23*/
+  vertical-align: middle;
+  padding-left: 10px;
 }
 
 .wrapper .sidebar li a:hover,
@@ -89,9 +106,7 @@ html, body {
 /*hover를 같은 설정으로 주고 싶으면 위의 코드보다 하나 위로 위치해야 함*/
 .wrapper .sidebar li a.logout{
   border-radius: 20px 0px 0px 20px;
-  background: rgba(191, 203, 255, 0.26);
-  margin-top: 90%;
-  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  margin-top: 360px;
 }
 
 .wrapper .sidebar li a:hover i,
@@ -104,24 +119,11 @@ html, body {
   display: block;
 }
 
-.icon {
-  vertical-align: middle;
-}
-
-.item {
-  vertical-align: middle;
-  font-family: 'AppleSDGothicNeoB00';
-  font-size: 2.4rem;
-  font-style: normal;
-  line-height: normal;
-  padding-left: 2rem;
-}
-
 .main {
   float:left;
-  width: 79%;
+  width: 82%;
   height: 97%;
-  min-width: 974.062px;
+  min-width: 1246px;
   min-height: 607.272px;
 }
 
@@ -138,10 +140,9 @@ html, body {
 }
 
 .main .place {
-  margin-top: 2rem;
-  margin-right: 5.87rem;
+  margin-top: 27px;
+  margin-right: 62px;
   float: right;
-  flex-shrink: 0;
   min-width: 177.453px;
   min-height: 31px;
 }
@@ -153,38 +154,48 @@ html, body {
 .main .place .placeName {
   color: #BAC7E8;
   font-family: 'AppleSDGothicNeoB00';
-  font-size: 2.0667rem;
-  font-style: normal;
-  font-weight: 40rem;
-  line-height: normal;
+  font-size: 15px;
   vertical-align: middle;
 }
 
 .main .block {
-  width: 900px;
+  width: 1080px;
   height: 100%;
-  padding-top: 6%;
+  padding-top: 10%;
   margin: auto;
-}
-
-.main .leftBlock {
-  float: left;
 }
 
 .main .title {
   color: #000;
   font-family: 'AppleSDGothicNeoB00';
-  font-size: 4rem;
-  padding-left: 30px;
-  padding-bottom: 5px;
+  margin-left: 45px;
+  width: 219px;
+  height: 39px;
+  font-size: 30px;
+}
+
+.main .review {
+  width: 100%;
+  height: 131px;
+  border-radius: 10px;
+  background: #FFF;
+  margin-top: 30px;
+  margin-bottom: 36px;
+  padding: 24px 0px 0px 45px;
+}
+
+.main .totalRw {
+  color: #000;
+  font-family: 'AppleSDGothicNeoB00';
+  font-size: 20px;
 }
 
 .main .chartBox {
-  width: 595px;
-  height: 318px;
-  flex-shrink: 0;
-  border-radius: 1rem;
-  background: #FFFFFF;
+  width: 670px;
+  height: 369px;
+  border-radius: 10px;
+  background: #FFF;
+  float: left;
 }
 
 .main .chartBox .months {
@@ -210,40 +221,15 @@ html, body {
 }
 
 .main .chartBox .lineChart {
-  width: 416px;
+  width: 550px;
   margin: auto;
 }
 
-.main .review {
-  width: 595px;
-  height: 150px;
-  flex-shrink: 0;
-  border-radius: 1rem;
-  background: #FFFFFF;
-  margin-top: 3%;
-  padding: 20px 0px 0px 30px;
-}
-
-.main .totalRw1 {
-  color: #000;
-  font-family: 'AppleSDGothicNeoB00';
-  font-size: 4rem;
-  padding-bottom: 20px;
-}
-
-.main .totalRw2 {
-  color: #000;
-  font-family: 'AppleSDGothicNeoB00';
-  font-size: 2rem;
-}
 
 .main .side {
-  width: 290px;
-  display: flex;
   float: right;
 }
 
 .main #doughnut {
-  width:100%;
-  margin-top: 100px;
+  width: 340px;
 }
